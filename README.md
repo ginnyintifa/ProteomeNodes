@@ -1,7 +1,7 @@
-#1 Introduction 
+## 1 Introduction 
 This package achieves curve fitting and classification for proteome and phosphoproteome stimulated with different treatment dosage and under two different temperatures. 
 
-#2 Installation and preparation 
+## 2  Installation and preparation 
 ProteomeNodes can be downloaded and installed in R. Installation of GPD requires devtools as a prerequisite:
 
 ```{r}
@@ -26,7 +26,7 @@ We also need the kinase-substrate relationship file which is provided in this re
 
 * ks_network_file
 
-#3 Function 
+## 3 Function 
 To run the function we call
 
 ```{r}
