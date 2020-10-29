@@ -1,7 +1,8 @@
 ## 1 Introduction 
 This package achieves curve fitting and classification for proteome and phosphoproteome stimulated with different treatment dosage and under two different temperatures. 
 
-## 2  Installation and preparation 
+## 2  Installation 
+
 ProteomeNodes can be downloaded and installed in R. Installation of GPD requires devtools as a prerequisite:
 
 ```{r}
@@ -14,6 +15,10 @@ library("devtools")
 devtools::install_github("ginnyintifa/ProteomeNodes")
 library(ProteomeNodes)
 ```
+
+
+## 3 Input files
+
 Input files needed are output from maxQuant
 
 * s1_phospho_file
@@ -26,7 +31,7 @@ We also need the kinase-substrate relationship file which is provided in this re
 
 * ks_network_file
 
-## 3 Function 
+## 4 Function 
 To run the function we call function 
 
 ```{r}
@@ -69,4 +74,5 @@ Here we further explain the choice of the the following parameters.
 * range_threshold: a numeric value to categorise curves to NR and non-NR, default to 0.3. This is the difference between the maximum and minimum value of the fitted curve. 
  
 
+## 5 Output files
 
