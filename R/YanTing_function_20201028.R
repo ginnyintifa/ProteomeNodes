@@ -606,6 +606,7 @@ curveFittingDouble = function(cleanedData,
   
   
 {
+  cat("starts curve fitting.", "\n")
   
   # cleanedData = doublePhospho_s1
   # dosages = dosages
