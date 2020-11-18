@@ -620,7 +620,7 @@ curveFittingDouble = function(cleanedData,
   
   data1_col = grep(rep1Colnames, colnames(cleanedData))
   data2_col = grep(rep2Colnames, colnames(cleanedData))
-  #info_col = setdiff(seq(1:ncol(cleanedData)), c(data1_col, data2_col))
+  info_col = setdiff(seq(1:ncol(cleanedData)), c(data1_col, data2_col))
   
   sq1 = seq(1:dosages)
   sq2 = seq(1:dosages)
