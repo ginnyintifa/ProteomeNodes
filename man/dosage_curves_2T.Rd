@@ -4,12 +4,32 @@
 \alias{dosage_curves_2T}
 \title{Fit curves}
 \usage{
-dosage_curves_2T(s1_phospho_file, s2_phospho_file, s1_peptide_file,
-  s2_peptide_file, ks_network_file, prob_threshold, dosages,
-  range_threshold, s1_tag, s2_tag, s1_rep1_colnames, s1_rep2_colnames,
-  s1_rep1_omit, s1_rep2_omit, s2_rep1_colnames, s2_rep2_colnames,
-  s2_rep1_omit, s2_rep2_omit, bandwidth, lead_phospho_BL, lead_peptide_BL,
-  order_s, both_s_BL, output_dir)
+dosage_curves_2T(
+  s1_phospho_file,
+  s2_phospho_file,
+  s1_peptide_file,
+  s2_peptide_file,
+  ks_network_file,
+  prob_threshold = 0.5,
+  dosages,
+  range_threshold = 0.3,
+  s1_tag,
+  s2_tag,
+  s1_rep1_colnames,
+  s1_rep2_colnames,
+  s1_rep1_omit,
+  s1_rep2_omit,
+  s2_rep1_colnames,
+  s2_rep2_colnames,
+  s2_rep1_omit,
+  s2_rep2_omit,
+  bandwidth = 0.1,
+  lead_phospho_BL,
+  lead_peptide_BL,
+  order_s,
+  both_s_BL,
+  output_dir
+)
 }
 \arguments{
 \item{s1_phospho_file}{file name of the phosphopeptide data under scenario 1}

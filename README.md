@@ -1,5 +1,5 @@
 ## 1 Introduction 
-This package achieves curve fitting and classification for proteome and phosphoproteome stimulated with different treatment dosage and under two different temperatures. 
+This package achieves fold change calculation and curve fitting and classification for proteome and phosphoproteome stimulated with different treatment dosage and under two different temperatures. 
 
 ## 2  Installation 
 
