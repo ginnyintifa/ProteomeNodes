@@ -32,7 +32,7 @@ We also need the kinase-substrate relationship file which is provided in this re
 * ks_network_file
 
 ## 4 Function 
-To run the function we call function 
+ProteomeNodes has two functions to call for two different experimental settings. If you monitor abundance changes in response to multiple doses (normally around 10 different doses), call ```dosage_curves_2T```. Alternatively, if you have two treatment levels and one control conditaion, call ```foldChange_2T```.
 
 ```{r}
 dosage_curves_2T
