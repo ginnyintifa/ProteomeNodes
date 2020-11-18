@@ -24,7 +24,7 @@
 #' @param order_s which replicate should be arranged at the first place 
 #' @param both_s_BL a boolean value, show pairs with both protein and phospho or not
 #' @param output_dir output directory 
-#' @import dplyr data.table magrittr ggplot2
+#' @import dplyr data.table magrittr ggplot2 ggrepel
 #' @export
 
 
