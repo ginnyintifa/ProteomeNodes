@@ -281,7 +281,7 @@ fileCleanPhosphoSites = function(original_file,
     
     
     
-    if(x%%100 ==0)
+    if(x%%1000 ==0)
       cat(x, "\n")
     
     return(full_frame)
@@ -405,7 +405,7 @@ fileCleanPeptides = function(original_file,
     
     full_frame = data.frame(proteins = disect_proteins, this_frame[rep(1, length(disect_proteins)),], stringsAsFactors = F)
     
-    if(x%%100 ==0)
+    if(x%%1000 ==0)
       cat(x, "\n")
     
     return(full_frame)
@@ -606,8 +606,7 @@ curveFittingDouble = function(cleanedData,
   
   
 {
-  cat("starts curve fitting.", "\n")
-  
+
   # cleanedData = doublePhospho_s1
   # dosages = dosages
   # distanceTH = range_threshold
@@ -1688,7 +1687,7 @@ arrPlot = function(phosphoSite1_fit,
         
         ### make the name 
         
-        cat(i, k , "\n")
+        #cat(i, k , "\n")
         this_name = paste(join_order_follow$proteins[k], 
                           join_order_follow$positionsOnProteins[k],
                           join_order_follow$residue[k],
@@ -2105,7 +2104,7 @@ arrPlot_notBoth = function(phosphoSite1_fit,
         
         ### make the name 
         
-        cat(i, k , "\n")
+      #  cat(i, k , "\n")
         order_name = paste(this_onlyOrder$proteins[k], 
                            this_onlyOrder$positionsOnProteins[k],
                            this_onlyOrder$residue[k],
@@ -2207,7 +2206,7 @@ arrPlot_notBoth = function(phosphoSite1_fit,
         
         ### make the name 
         
-        cat(i, k , "\n")
+     #   cat(i, k , "\n")
         follow_name = paste(this_onlyFollow$proteins[k], 
                             this_onlyFollow$positionsOnProteins[k],
                             this_onlyFollow$residue[k],
@@ -2303,7 +2302,7 @@ arrPlot_notBoth = function(phosphoSite1_fit,
     ### no phosphorylation sites for either
     if((!nrow(this_onlyOrder)>0)&(!nrow(this_onlyFollow)>0))
     {
-      cat(i, "\n")
+      #cat(i, "\n")
       
       ## for the protein 
       plot(NULL, xlab = orderProt_xlab, ylab = paste0("prot abundance ", order_tag), 
