@@ -1,6 +1,7 @@
 ## 1 Introduction 
 This package achieves fold change calculation and curve fitting and classification for proteome and phosphoproteome stimulated with different treatment dosage and under two different temperatures. 
 
+
 ## 2  Installation 
 
 ProteomeNodes can be downloaded and installed in R. Installation of GPD requires devtools as a prerequisite:
@@ -19,7 +20,10 @@ library(ProteomeNodes)
 
 ## 3 Input files
 
-Input files needed are output from maxQuant
+
+ProteomeNodes has two modes for two different experimental settings. If you monitor abundance changes in response to multiple doses (normally around 10 different doses), choose mode ```dosage_curves_2T```. Alternatively, if you have two treatment levels and one control conditaion, choose mode ```foldChange_2T```.
+
+In ```dosage_curves_2T``` mode, input files needed are output from maxQuant
 
 * s1_phospho_file
 * s2_phospho_file
@@ -31,8 +35,28 @@ We also need the kinase-substrate relationship file which is provided in this re
 
 * ks_network_file
 
+In ```foldChange_2T``` mode, in addition to the raw maxquant output files, it is necessary to provide a input specification file, such as one in "spCol_positions.txt"
+
+```
+condition	position
+sp1ctrlCol	16
+sp2ctrlCol	19
+sp3ctrlCol	22
+sp1lowCol	17
+sp2lowCol	20
+sp3lowCol	23
+sp1highCol	18
+sp2highCol	21
+sp3highCol	24
+```
+
+Here, column "position" is the column number of the specified conditions in both input data files. 
+
+
+
+
 ## 4 Function 
-ProteomeNodes has two functions to call for two different experimental settings. If you monitor abundance changes in response to multiple doses (normally around 10 different doses), call ```dosage_curves_2T```. Alternatively, if you have two treatment levels and one control conditaion, call ```foldChange_2T```.
+
 
 Here are examples of running the two functions:
 
@@ -74,9 +98,9 @@ Here we further explain the choice of the the following parameters.
 
 
 foldChange_2T(
-rawData_inputfilename1 = "20200813_TF_MEHP37_F_PeptideGroups.txt",
-rawData_inputfilename2 = "20200813_TF_MEHP53_F_PeptideGroups.txt",
-inputSpec_filename =  "20200813_TF_spCol_positions.txt",
+rawData_inputfilename1 = "MEHP37_F_PeptideGroups.txt",
+rawData_inputfilename2 = "MEHP53_F_PeptideGroups.txt",
+inputSpec_filename =  "spCol_positions.txt",
 rep_number = 3,
 workingDir =  "your/output/dir/",
 mapDIA_flag = T,
@@ -123,15 +147,22 @@ Detailed results for proteins and phosphosites can be found in the following .ts
 * 52C_phosphoFitted.tsv
 * prot_2s.tsv
 
+In ```foldChange_2T``` mode, these are the final output files:
+
+<img src="https://github.com/ginnyintifa/ProteomeNodes/blob/master/highVSctrl.png" align="center"/>
+
+* highVSctrl.pdf: scatter plot of protein fold changes (high condition over control) in two temperatures. Proteins reliable and significant are colored and labeled. 
+* lowVSctrl.pdf: scatter plot of protein fold changes (low condition over control) in two temperatures.
+
+Detailed results corresponding to the two figures can be found in:
+
+* highVSctrl.tsv
+* lowVSctrl.tsv
+ 
 
 
 
-
-
-
-
-
-
+ 
 
 
 
