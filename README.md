@@ -103,3 +103,23 @@ Note: mapDIA is a software used for generating statistical significance for smal
 In ```dosage_curves_2T``` mode, these are the final output files:
 
 
+* both_ProtPhospho_curve.pdf: the figure of curves fitted for proteins and phosphorylation sites. 
+
+<img src="https://github.com/ginnyintifa/ProteomeNodes/blob/master/both_ProtPhospho_curve.png" align="center"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
