@@ -103,9 +103,25 @@ Note: mapDIA is a software used for generating statistical significance for smal
 In ```dosage_curves_2T``` mode, these are the final output files:
 
 
-* both_ProtPhospho_curve.pdf: the figure of curves fitted for proteins and phosphorylation sites. 
+* both_ProtPhospho_curve.pdf: the figure of curves fitted for proteins and phosphorylation sites. Plots in the first and third column are protein changes at 37C and 52C respectively, whereas plots in the second and fourth column are one of phosphosite changes of corresponding proteins at 37C and 52C respectively. Blue and red colors contrast the two replicates.  
 
 <img src="https://github.com/ginnyintifa/ProteomeNodes/blob/master/both_ProtPhospho_curve.png" align="center"/>
+
+* not_both_ProtPhospho_curve.pdf: in the same format as the figure above, but this file has only protein or phosphosite curves. 
+
+
+<img src="https://github.com/ginnyintifa/ProteomeNodes/blob/master/prot_2s.png" align = "center"/>
+
+* prot_2s.pdf: the scatter plots of average slopes of proteins in two temperatures. Proteins beyond specified thresholds are colored and labeled. 
+
+
+Detailed results for proteins and phosphosites can be found in the following .tsv files:
+
+* 37C_protFitted.tsv
+* 52C_protFitted.tsv
+* 37C_phosphoFitted.tsv
+* 52C_phosphoFitted.tsv
+* prot_2s.tsv
 
 
 
